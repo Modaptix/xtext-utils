@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Util
+Bundle-SymbolicName: org.modaptix.xtext.util
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Modaptix
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Require-Bundle: 
+ org.eclipse.xtext,
+ org.eclipse.xtext.ui
+Export-Package: org.modaptix.xtext.util
+Import-Package: org.eclipse.emf.common.util
