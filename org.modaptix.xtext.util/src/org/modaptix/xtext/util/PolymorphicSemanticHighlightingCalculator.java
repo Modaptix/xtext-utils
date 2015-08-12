@@ -21,7 +21,11 @@ public class PolymorphicSemanticHighlightingCalculator implements ISemanticHighl
 			EObject grammarElement  = node.getGrammarElement();
 			EObject grammarElementContainer = grammarElement != null ? grammarElement.eContainer() : null; 
 			EObject semanticElement = NodeModelUtils.findActualSemanticObjectFor(node);
-			highlightDispatcher.invoke(semanticElement, grammarElement, grammarElementContainer, node, acceptor);
+			try
+			{
+				highlightDispatcher.invoke(semanticElement, grammarElement, grammarElementContainer, node, acceptor);
+			}
+			catch (IllegalStateException e)	{ }
 		}
 	}
 	
